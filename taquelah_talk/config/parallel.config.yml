@@ -1,0 +1,17 @@
+server: hub-cloud.browserstack.com
+user: BROWSERSTACK_USERNAME
+key: BROWSERSTACK_ACCESS_KEY
+
+common_caps:
+  build: converse-e2e-test-on-browserstack
+  browserstack.debug: true
+  browser_version: 78.0
+  browserstack.selenium_version: 3.5.2
+
+
+browser_caps:
+- browser: chrome
+- browser: firefox
+- browser: internet explorer
+- browser: safari
+ 
