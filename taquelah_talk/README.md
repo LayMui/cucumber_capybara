@@ -2,7 +2,7 @@
 
 ```
 Clone from github
-git clone https://github.com/taigers/iconverse/tree/develop/iconverse-qa-e2e/iconverse-qa-e2e.git
+git clone https://github.com/LayMui/cucumber_capybara.git
 
 To run in local environment with dependencies setup
 -Install Ruby 
@@ -22,16 +22,9 @@ To run specific test, modify the Rake task in the Rakefile
 To run on the cloud, comment out the following line at the Rakefile
 ENV['chrome'] ||= 'true'
 
-Build the docker image, Go to the folder with the Rakefile
-    rake docker-build
-
-Run the docker image built
-    rake docker-run
-
 Structure:
 
 ```bash
-├── Dockerfile
 ├── Rakefile
 ├── Gemfile
 ├── Gemfile.lock
@@ -42,8 +35,7 @@ Structure:
     ├── single.config.yml
 └── features
     ├── signin.feature
-    ├── roles_privileges.feature
-    ├── user_management.feature
+    
     ├── ....
     └── support
         ├── env.rb
@@ -51,8 +43,7 @@ Structure:
         ├── world.rb
     └── step_definitions
         ├── sign_in.rb
-        ├── roles_privileges.rb
-        ├── user_management.rb
+      
         ├── ...
 ```
 
@@ -65,11 +56,11 @@ before the step definitions
 The env.rb is loaded first. This is where you need to boot up your app
 
 Cucumber read the features file and map to the step definitions
-1 file per domain entities such as signin, roles_privileges, user_management, etc
+1 file per domain entities such as signin,  etc
 Step definition execute in the context of an Object called the World.
 By adding my own World module, we make the step definition code easier to read and
 able to decouple the step definition from the system.
-Any @instance_variable instantiated in a step definition will be assigned to the World, and can be accessed from other step definitions. Example The Actor (super_admin) @james.
+Any @instance_variable instantiated in a step definition will be assigned to the World, and can be accessed from other step definitions. Example The Actor (user) @james.
 
 Includes modules with helper method to the World
 
