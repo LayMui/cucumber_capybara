@@ -15,7 +15,6 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
-    cliver (0.3.2)
     cucumber (3.1.2)
       builder (>= 2.1.2)
       cucumber-core (~> 3.2.0)
@@ -40,15 +39,11 @@ GEM
     mini_portile2 (2.4.0)
     multi_json (1.14.1)
     multi_test (0.1.2)
-    nokogiri (1.10.5)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     parallel (1.19.1)
     parallel_tests (2.29.2)
       parallel
-    poltergeist (1.18.1)
-      capybara (>= 2.1, < 4)
-      cliver (~> 0.3.1)
-      websocket-driver (>= 0.2.0)
     public_suffix (4.0.1)
     rack (2.0.7)
     rack-test (1.1.0)
@@ -72,9 +67,6 @@ GEM
     selenium-webdriver (3.142.6)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    websocket-driver (0.7.1)
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
 
@@ -88,7 +80,6 @@ DEPENDENCIES
   launchy
   nokogiri
   parallel_tests
-  poltergeist
   rake
   rspec
   selenium-webdriver
